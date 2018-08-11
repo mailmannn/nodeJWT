@@ -34,6 +34,6 @@ make docker-stop
 
 ````
 
-#Notes: 
+# Notes: 
   - the persistence on the Database is on using a docker volume, so no problem with removing the containers
   - Node aplication uses nodemon so you can change code and files will be reloaded without need for any otehr action.
