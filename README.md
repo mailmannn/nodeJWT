@@ -4,6 +4,8 @@ Small example of JWT use for authentication in a small NodeJS rest API using mon
 
 ## Clone and run the application
 
+Clone:
+
 ````
 git clone https://github.com/mailmannn/nodeJWT.git
 
