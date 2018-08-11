@@ -11,13 +11,21 @@ git clone https://github.com/mailmannn/nodeJWT.git
 
 ````
 
-Build and run the application :
+Build and run the application (first time so that docker image is build) :
 
 
 ````
 make docker-build-start
 
 ````
+
+Start application (after first time):
+
+````
+make docker-start
+
+````
+
 
 Stop the application and remove containers:´´
 
