@@ -37,7 +37,7 @@ morgan.token('id', function getId (req) {
 //Loggers res
 app.use(mung.json(
     function transform(body, req, res) {
-        winston.log('info', {Message:req.id + ' -API REQUEST RESPONSE LOG ID:' ,  responseBody:JSON.stringify(body)});
+        winston.log('info', {Message:req.id + ' - API REQUEST RESPONSE LOG ID:' ,  responseBody:JSON.stringify(body)});
         return body;
     }
 ));
