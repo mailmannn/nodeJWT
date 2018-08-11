@@ -44,7 +44,7 @@ app.use(mung.json(
 //log requests
 app.use(morgan('dev', {
     skip: function (req, res) { return res.statusCode < 400 }
-  }))
+  }));
 
 app.use(morgan(':id [:date[clf]] :method :url :response-time', {stream: winston.stream}));
 
