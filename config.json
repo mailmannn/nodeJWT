@@ -1,0 +1,4 @@
+﻿{
+    "connectionString": "mongodb://nodejwtdb/nodejwt",
+    "secret": "dfewfewfwerfewrfefwerfwer"
+}

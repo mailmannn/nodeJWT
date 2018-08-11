@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "a5b73779-bfcc-4b2d-a94a-8061de9515cf",
+		"name": "nodejwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"description": "",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "teste",
+									"sessionValue": "teste",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "testelastname",
+									"sessionValue": "testelastname",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "teste@mail.com",
+									"sessionValue": "teste@mail.com",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "teste",
+									"sessionValue": "teste",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "testelastname",
+									"sessionValue": "testelastname",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "teste@mail.com",
+									"sessionValue": "teste@mail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjU3YmMwZmQ3ZDg1MjAwMWM3YjBkNTEiLCJpYXQiOjE1MzI5NDgyMTl9.umDvQ8IxJLjOvQj00Vz9UIOuAkG9R5uF-bvRRXZWdS0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "teste",
+									"sessionValue": "teste",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "testelastname",
+									"sessionValue": "testelastname",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "teste@mail.com",
+									"sessionValue": "teste@mail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "login and then copy token to security tab in bearer token"
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjU3YmMwZmQ3ZDg1MjAwMWM3YjBkNTEiLCJpYXQiOjE1MzI5NDgyMTl9.umDvQ8IxJLjOvQj00Vz9UIOuAkG9R5uF-bvRRXZWdS0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "teste",
+									"sessionValue": "teste",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "testelastname",
+									"sessionValue": "testelastname",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "teste@mail.com",
+									"sessionValue": "teste@mail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "login and then copy token to security tab in bearer token"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjU3YmMwZmQ3ZDg1MjAwMWM3YjBkNTEiLCJpYXQiOjE1MzI5NDgyMTl9.umDvQ8IxJLjOvQj00Vz9UIOuAkG9R5uF-bvRRXZWdS0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "manager",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "teste",
+									"sessionValue": "teste",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "testelastname",
+									"sessionValue": "testelastname",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "teste@mail.com",
+									"sessionValue": "teste@mail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						},
+						"description": "login and then copy token to security tab in bearer token"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
