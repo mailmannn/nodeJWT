@@ -1,5 +1,5 @@
 # NodeJWT
-Small example of JWT use for authentication in a small NodeJS rest API using mongoDB.
+Small example of JWT use for authentication in a small NodeJS rest API using mongoDB, all using docker images and docker-compose.
 
 
 ## Clone and run the application
