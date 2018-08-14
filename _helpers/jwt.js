@@ -3,7 +3,6 @@ const config = require('config.json');
 const userService = require('../modules/users/user.service');
 
 async function isRevoked(req, payload, done) {
-    console.log(payload);
     const id = payload.sub;
     const user = await userService.getById(id);
 

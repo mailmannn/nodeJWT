@@ -24,14 +24,14 @@ app.use(helmet());
 
 //set an unique id for each request
 app.use(function(req, res, next) {
-    req.id = uuid.v4()
+    req.id = uuid.v4();
     next();
 });
 
 //set morgan token
 morgan.token('id', function getId (req) {
-    return req.id
-  })
+    return req.id;
+  });
 
 //Loggers res
 app.use(mung.json(
@@ -42,7 +42,7 @@ app.use(mung.json(
 ));
 //log requests
 app.use(morgan('dev', {
-    skip: function (req, res) { return res.statusCode < 400 }
+    skip(req, res) { return res.statusCode < 400 ;}
   }));
 
 app.use(morgan(':id [:date[clf]] :method :url :response-time', {stream: winston.stream}));
@@ -63,5 +63,5 @@ app.use(errorHandler);
 // start server
 const port = process.env.NODE_ENV === 'production' ? 80 : 4000;
 const server = app.listen(port, function () {
-    console.log('Server listening on port ' + port);
+    //console.log('Server listening on port ' + port);
 });

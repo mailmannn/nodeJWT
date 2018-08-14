@@ -1,6 +1,6 @@
 FROM node:alpine
 
-MAINTAINER andrepinheiro
+MAINTAINER andrepinheiro.projectos@gmail.com
 
 COPY . /app
 
