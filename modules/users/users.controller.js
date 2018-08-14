@@ -5,7 +5,7 @@ const userService = require('./user.service');
 function authenticate(req, res, next) {
     userService.authenticate(req.body)
         .then((user) => user ? res.json(user) : res.status(401).json({status:'Error', message: 'INCORRECT_USERNAME_OR_PASSWORD' }))
-        .catch(err => next(err));
+        .catch((err) => next(err));
 }
 
 function register(req, res, next) {
