@@ -2,17 +2,6 @@
 const router = express.Router();
 const userService = require('./user.service');
 
-// routes
-router.post('/authenticate', authenticate);
-router.post('/register', register);
-router.get('/', getAll);
-router.get('/:id', getById);
-router.get('/current', getCurrent);
-router.put('/:id', update);
-router.delete('/:id', _delete);
-
-module.exports = router;
-
 function authenticate(req, res, next) {
     userService.authenticate(req.body)
         .then(user => user ? res.json(user) : res.status(401).json({status:'Error', message: 'INCORRECT_USERNAME_OR_PASSWORD' }))
@@ -54,3 +43,14 @@ function _delete(req, res, next) {
         .then(() => res.json({}))
         .catch(err => next(err));
 }
+
+// routes
+router.post('/authenticate', authenticate);
+router.post('/register', register);
+router.get('/', getAll);
+router.get('/:id', getById);
+router.get('/current', getCurrent);
+router.put('/:id', update);
+router.delete('/:id', _delete);
+
+module.exports = router;

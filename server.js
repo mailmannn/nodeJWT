@@ -15,7 +15,6 @@ const jwt = require('./_helpers/jwt');
 const errorHandler = require('./_helpers/error-handler');
 const winston = require('./_helpers/winston');
 
-
 //MDW
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

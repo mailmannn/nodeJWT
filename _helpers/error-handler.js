@@ -1,5 +1,4 @@
 const winston = require('./winston');
-module.exports = errorHandler;
 
 function errorHandler(err, req, res, next) {
     if (typeof (err) === 'string') {
@@ -25,3 +24,5 @@ function errorHandler(err, req, res, next) {
     winston.log('error', {Message:'Default ERROR  - ID:' + req.id + ' content:',  responseBody:JSON.stringify(err)});
     return res.status(500).json({ message: err.message });
 }
+
+module.exports = errorHandler;
