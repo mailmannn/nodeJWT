@@ -1,6 +1,6 @@
 {
     "name": "nodejwtapi",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Node JS rest API + MongoDB - user creation + auth with JWT",
     "license": "MIT",
     "repository": {
