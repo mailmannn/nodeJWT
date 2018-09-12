@@ -11,10 +11,3 @@ mongoose.Promise = global.Promise;
 module.exports = {
     User: require('../modules/users/user.model'),
 };
-
-
-
-
-//add { useNewUrlParser: true } to mongodb.connect
-
-
