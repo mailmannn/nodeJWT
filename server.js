@@ -47,7 +47,6 @@ app.use(morgan('dev', {
 
 app.use(morgan(':id [:date[clf]] :method :url :response-time', {stream: winston.stream}));
 
-
 //metrics
 app.use(kardiaMDW);
 
