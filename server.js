@@ -8,7 +8,7 @@ const morgan = require('morgan');
 const kardiaMDW = require ('./modules/kardia/kardiaMDW');
 const compression = require('compression');
 const mung = require('express-mung');
-const uuid = require('node-uuid');
+const uuid = require('uuid/v4');
 
 //Helpers
 const jwt = require('./_helpers/jwt');
@@ -24,7 +24,7 @@ app.use(helmet());
 
 //set an unique id for each request
 app.use(function(req, res, next) {
-    req.id = uuid.v4();
+    req.id = uuid();
     next();
 });
 
