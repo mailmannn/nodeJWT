@@ -12,7 +12,6 @@ services:
       - 4000:4000
     environment:
       - MONGO_URI=mongodb://nodejwtdb/nodejwt
-      - NODE_PORT=3003
       - NODE_ENV=dev
     depends_on:
       - db
