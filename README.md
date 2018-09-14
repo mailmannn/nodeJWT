@@ -1,5 +1,7 @@
 # NodeJWT
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b2b842b547b64235823e0cf40c9632db)](https://app.codacy.com/app/andrepinheiro.um/nodeJWT?utm_source=github.com&utm_medium=referral&utm_content=mailmannn/nodeJWT&utm_campaign=Badge_Grade_Dashboard)
+
 Example of JWT use for authentication in a small NodeJS rest API using mongoDB, all using docker images and docker-compose.
 
 
