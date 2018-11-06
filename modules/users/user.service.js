@@ -25,7 +25,6 @@ async function getById(id) {
 }
 
 async function create(userParam) {
-    // validate
     if (await User.findOne({ username: userParam.username })) {
         throw 'Username "' + userParam.username + '" is already taken';
     }
@@ -65,11 +64,16 @@ async function _delete(id) {
     await User.findByIdAndRemove(id);
 }
 
+async function _deleteByUsername(username) {
+    await User.deleteOne({ username: username });
+}
+
 module.exports = {
     authenticate,
     getAll,
     getById,
     create,
     update,
-    delete: _delete
+    delete: _delete,
+    deleteByUsername: _deleteByUsername
 };

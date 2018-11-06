@@ -22,4 +22,6 @@ docker-init:
 	docker pull andrepinheiro/nodejwt:1.0
 	docker pull mongo:3.0.15
 
-
+#test
+docker-test:
+	mocha './test/**/*.spec.js'

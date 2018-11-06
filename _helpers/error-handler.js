@@ -3,7 +3,7 @@ const winston = require('./winston');
 function errorHandler(err, req, res, next) {
     if (typeof (err) === 'string') {
         // custom application error
-        winston.console.log();
+        //winston.console.log();
         winston.log('error', {Message:'ERROR ID:' + req.id + ' content:',  responseBody:JSON.stringify(err)});
         return res.status(400).json({ message: err });
     }
