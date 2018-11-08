@@ -65,7 +65,9 @@ async function _delete(id) {
 }
 
 async function _deleteByUsername(username) {
-    await User.deleteOne({ username: username });
+    await User.deleteOne({ 
+        username: username 
+    });
 }
 
 module.exports = {

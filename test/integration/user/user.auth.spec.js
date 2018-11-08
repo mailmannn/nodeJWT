@@ -6,6 +6,24 @@ chai.use(chaiHttp);
 
 var request = require('supertest')('http://localhost:4000');
 
+function loginUser(auth) {
+    return (done) => {
+        function onResponse(err, res) {
+            auth.token = res.body.token;
+            return done();
+        }
+        request
+            .post('/users/authenticate')
+            .send({
+                username: 'manager',
+                password: 'manager'
+            })
+            .type('form')
+            .expect(200)
+            .end(onResponse);
+    };
+}
+
 describe('/POST user authenticate', () => {
     it('should create User TestAuth', (done) => {
         chai.request('http://localhost:4000')
@@ -50,7 +68,7 @@ describe('/POST user authenticate', () => {
                 .end((err, res) => {
                       expect(err).to.be.null;
                       expect(res).to.have.status(200);
-                      expect(res.body).to.have.property('token')
+                      expect(res.body).to.have.property('token');
                   done();
                 });
             });
@@ -94,27 +112,8 @@ describe('/POST user authenticate', () => {
             .set('Authorization', 'bearer ' + auth.token)
             .expect(200)
             .end(function(err, res) {
-                if (err) return done(err);
+                if (err) {return done(err)};
                 done();
             });
     });
-
-    function loginUser(auth) {
-        return (done) => {
-            request
-                .post('/users/authenticate')
-                .send({
-                    username: 'manager',
-                    password: 'manager'
-                })
-                .type('form')
-                .expect(200)
-                .end(onResponse);
-    
-            function onResponse(err, res) {
-                auth.token = res.body.token;
-                return done();
-            }
-        };
-    }
 });
