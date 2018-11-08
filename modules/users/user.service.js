@@ -66,7 +66,7 @@ async function _delete(id) {
 
 async function _deleteByUsername(username) {
     await User.deleteOne({ 
-        username: username 
+        username
     });
 }
 
