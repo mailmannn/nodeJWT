@@ -1,0 +1,231 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-11-19T11:46:16.703Z",
+	"__export_source": "insomnia.desktop.app:v6.2.0",
+	"resources": [
+		{
+			"_id": "wrk_aba95e8f26d84e96b1b6d60264566c82",
+			"created": 1541678008800,
+			"description": "",
+			"modified": 1541678008800,
+			"name": "Insomnia",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_39d00349afa94300af61fd2222496562",
+			"color": null,
+			"created": 1541678008846,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1541678008846,
+			"modified": 1542627835564,
+			"name": "New Environment",
+			"parentId": "wrk_aba95e8f26d84e96b1b6d60264566c82",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_12431ddfc8d44792b4f74bd09a7264d4",
+			"cookies": [],
+			"created": 1541678008849,
+			"modified": 1541678008849,
+			"name": "Default Jar",
+			"parentId": "wrk_aba95e8f26d84e96b1b6d60264566c82",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_d4aed7bb553f4a87ad6cdc9a30d2f019",
+			"created": 1541678023265,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1541678023265,
+			"modified": 1541678023265,
+			"name": "NodeJWT",
+			"parentId": "wrk_aba95e8f26d84e96b1b6d60264566c82",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_4c7b1db51aaf434fa17ec376a127f1bc",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/x-www-form-urlencoded",
+				"params": [
+					{
+						"id": "pair_4ef60f2242074c72afbfd25fba44283a",
+						"name": "username",
+						"value": "manager"
+					},
+					{
+						"id": "pair_04e9e9b3083a41faa79b4beafe62d1ac",
+						"name": "password",
+						"value": "manager"
+					}
+				]
+			},
+			"created": 1541678034375,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d977a442eefc489cb6e00f840ed048a5",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1541678034375,
+			"method": "POST",
+			"modified": 1542627671580,
+			"name": "Login",
+			"parameters": [],
+			"parentId": "fld_d4aed7bb553f4a87ad6cdc9a30d2f019",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:4000/users/authenticate",
+			"_type": "request"
+		},
+		{
+			"_id": "req_0c45f18aa03d4df4ae8f27af8f64366a",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/x-www-form-urlencoded",
+				"params": [
+					{
+						"id": "pair_7d237c3ac9fc43ca9313c292fc6ee941",
+						"name": "username",
+						"value": "newUser"
+					},
+					{
+						"id": "pair_b04aa25622a24fe4a168838162333bc3",
+						"name": "password",
+						"value": "newuser"
+					},
+					{
+						"id": "pair_b7ae6096673748cfbf885043a0ca6ed8",
+						"name": "firstName",
+						"value": "new"
+					},
+					{
+						"id": "pair_51dfe850c4c6401597ae844e06144a2e",
+						"name": "lastName",
+						"value": "user"
+					},
+					{
+						"id": "pair_e40850eb713c450aa5ee4bad2b90af02",
+						"name": "email",
+						"value": "newUser@email.com"
+					}
+				]
+			},
+			"created": 1541678128943,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_cfd62bd11830418eb9baf520475d9cd8",
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1541678128943,
+			"method": "POST",
+			"modified": 1541687788013,
+			"name": "Register",
+			"parameters": [],
+			"parentId": "fld_d4aed7bb553f4a87ad6cdc9a30d2f019",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:4000/users/register",
+			"_type": "request"
+		},
+		{
+			"_id": "req_4341e593ad104b4f91515754aa1ff96c",
+			"authentication": {
+				"prefix": "",
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjliZWE0M2YyNTM1MzAwMWRiOWMzMzIiLCJpYXQiOjE1NDE2NzgzNzF9.Beds1u3wt_Y06Gu1LZ_6ZblmqKNRu07vE-LvYQQtV9I",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1541678347559,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1541678347559,
+			"method": "DELETE",
+			"modified": 1541687805353,
+			"name": "Delete User",
+			"parameters": [],
+			"parentId": "fld_d4aed7bb553f4a87ad6cdc9a30d2f019",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:4000/users/newUser",
+			"_type": "request"
+		},
+		{
+			"_id": "req_530991d7c2654a4ebd0c5083fa7ef545",
+			"authentication": {
+				"prefix": "",
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjliZWE0M2YyNTM1MzAwMWRiOWMzMzIiLCJpYXQiOjE1NDI2Mjc2NzN9.NXhwLnIrkDzmxFoOO4TaWbJaGl4_fqEm4ArUqrY5kh4",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1541678426551,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1541678426551,
+			"method": "GET",
+			"modified": 1542627835900,
+			"name": "Get All Users",
+			"parameters": [],
+			"parentId": "fld_d4aed7bb553f4a87ad6cdc9a30d2f019",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:4000/users",
+			"_type": "request"
+		},
+		{
+			"_id": "req_a3e3de008d6445d3a19d542c95e06cae",
+			"authentication": {
+				"prefix": "",
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YjliZWE0M2YyNTM1MzAwMWRiOWMzMzIiLCJpYXQiOjE1NDE2Nzg0NTF9.B_gBXE6lvjC_6ody42DffB9yYcj_BbgNwuxPwqGRgJ0",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1541678530316,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1541678530316,
+			"method": "GET",
+			"modified": 1541686834702,
+			"name": "Get User by id ",
+			"parameters": [],
+			"parentId": "fld_d4aed7bb553f4a87ad6cdc9a30d2f019",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:4000/users/5b9bea43f25353001db9c332",
+			"_type": "request"
+		}
+	]
+}
